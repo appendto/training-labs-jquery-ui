@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+	<title>jQuery UI: Resizable</title>
+    <link rel="stylesheet" href="css/ui-lightness/jquery-ui.css">
+    <style>
+    	p.resizeMe {
+    		width: 200px;
+    		height: 200px;
+    		overflow:hidden;
+    	}
+    </style>
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/jquery-ui-1.10.4.js"></script>
+</head>
+<body>
+
+<h1>jQuery UI: Resizable</h1>
+
+<h3>Instructions</h3>
+<ol>
+	<li>Make the given p.resizeMe paragraphs resizable in such a way that resizing one, resizes both simultaneously.</li>
+	<li>Make them resizable to no larger than 500x500 and no smaller than 100x100.</li>
+</ol>
+
+<p class="resizeMe">
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante quam, dignissim nec lorem quis, elementum commodo massa. Curabitur quam diam, viverra sed molestie sed, euismod at quam. Vivamus vel nibh quis magna lacinia auctor vel mollis quam. Pellentesque in dictum massa, eget dignissim ante. Mauris luctus tempus metus quis accumsan. Fusce non lectus ut felis commodo gravida. Integer a quam non massa fermentum posuere. Cras in enim purus. Etiam volutpat tempus interdum. Pellentesque scelerisque tellus felis, eget fringilla velit euismod eu. Integer eget leo diam. Etiam pharetra sem eu sem elementum aliquet. Integer condimentum tincidunt enim id faucibus. Maecenas at accumsan mauris. Donec sed nisi dapibus, laoreet velit in, mollis justo. Suspendisse vel vestibulum enim
+</p>
+
+<p class="resizeMe">
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante quam, dignissim nec lorem quis, elementum commodo massa. Curabitur quam diam, viverra sed molestie sed, euismod at quam. Vivamus vel nibh quis magna lacinia auctor vel mollis quam. Pellentesque in dictum massa, eget dignissim ante. Mauris luctus tempus metus quis accumsan. Fusce non lectus ut felis commodo gravida. Integer a quam non massa fermentum posuere. Cras in enim purus. Etiam volutpat tempus interdum. Pellentesque scelerisque tellus felis, eget fringilla velit euismod eu. Integer eget leo diam. Etiam pharetra sem eu sem elementum aliquet. Integer condimentum tincidunt enim id faucibus. Maecenas at accumsan mauris. Donec sed nisi dapibus, laoreet velit in, mollis justo. Suspendisse vel vestibulum enim
+</p>
+
+	<script type="text/javascript">
+		$( "p.resizeMe" ).resizable({
+			maxWidth: 500,
+			maxHeight: 500,
+			minHeight: 100,
+			minWidth: 100,
+			alsoResize: ".resizeMe"
+		});
+	</script>
+</body>
+</html>

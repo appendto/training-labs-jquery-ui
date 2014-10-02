@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+	<title>jQuery UI Examples</title>
+	<!-- Include jQuery UI Stuff Here -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/ui-lightness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <!-- End jQuery UI -->
+    <style type="text/css">
+    	#dialog {
+    		display:none;
+    	}
+    	#menu {
+    		width: 300px;
+    	}
+    </style>
+</head>
+<body>
+
+<h1>jQuery UI Examples</h1>
+
+<h2>Dialog</h2>
+<button id="dialogButton">Open Dialog</button>
+<div id="dialog" title="I am a Dialog Box">
+  <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+</div>
+
+<hr />
+
+<h2>Datepicker</h2>
+<p>Choose Date: <input type="text" id="datepicker"></p>
+
+<hr />
+
+<h2>Accordion</h2>
+<div id="accordion">
+  <h3>jQuery UI Foundations</h3>
+  <div>
+    <p>
+    In this class, attendees will gain a foundational knowledge of jQuery UI by learning about each of the interactions and widgets. Attendees will learn how these components can work together to build a user interface that is interactive while easy to create.
+    </p>
+  </div>
+  <h3>Introduction to jQuery Mobile</h3>
+  <div>
+    <p>
+    Learn how to use its library and progressive enhancement approach to create rich and interactive mobile user experiences with wide device support.
+    </p>
+  </div>
+  <h3>Advance jQuery Techniques</h3>
+  <div>
+    <p>
+    We'll teach you how to utilize the jQuery library in the context of large-scale applications and show you how to dramatically improve performance, write cleaner and more concise code, and increase maintainability and reusability.
+    </p>
+    <ul>
+      <li>List item one</li>
+      <li>List item two</li>
+      <li>List item three</li>
+    </ul>
+  </div>
+</div>
+
+<hr />
+
+<h2>Menu</h2>
+
+<ul id="menu">
+	<li><a href="#">Item 1</a></li>
+	<li>
+		<a href="#">Item 2</a>
+		<ul>
+			<li><a href="#">Sub Item 1</a></li>
+			<li><a href="#">Sub Item 2</a></li>
+			<li><a href="#">Sub Item 3</a></li>
+		</ul>
+	</li>
+	<li>
+		<a href="#">Item 3</a>
+		<ul>
+			<li><a href="#">Sub Item 4</a></li>
+			<li><a href="#">Sub Item 5</a></li>
+			<li><a href="#">Sub Item 6</a></li>
+		</ul>
+	</li>
+	<li><a href="#">Item 4</a></li>
+</ul>
+
+	<script type="text/javascript">
+		/*
+			Dialog Initialization Code
+		*/
+		$( "#dialogButton" ).button().click( function() {
+			$( "#dialog" ).dialog({
+				modal: true
+			});
+		});
+
+		/*
+			Datepicker Initialization Code
+		*/
+		$( "#datepicker" ).datepicker({
+	      showOn: "button",
+	      buttonImage: "images/calendar.gif",
+	      buttonImageOnly: true
+	    });
+
+	    /*
+			Accordion Initialization Code
+	    */
+	    $( "#accordion" ).accordion();
+
+	    /*
+			Menu Initialization Code
+	    */
+	    $( "#menu" ).menu();
+	</script>
+</body>
+</html>

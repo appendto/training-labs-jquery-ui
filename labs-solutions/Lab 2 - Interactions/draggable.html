@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+	<title>jQuery UI: Draggable</title>
+    <link rel="stylesheet" href="css/ui-lightness/jquery-ui.css">
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/jquery-ui-1.10.4.js"></script>
+
+    <style>
+    	#draggableContainer {
+    		margin: 0 auto;
+    		width: 500px;
+    		height: 500px;
+    		background: #f5f5f5;
+    		border: 1px solid green;
+    	}
+    </style>
+</head>
+<body>
+
+<h1>jQuery UI: Draggable</h1>
+
+<h3>Instructions:</h3>
+<h4>Part 1:</h4>
+<ol>
+	<li>Create 2 draggable objects using the images, "images/earth.jpg" and "images/tulips.jpg".</li>
+	<li>Constrain one to move only horizontally and the other move only vertically.</li>
+	<li>Specify the "crosshair" cursor for one, and the "pointer" for the other.</li>
+</ol>
+<h4>Part 2:</h4>
+<ol>
+	<li>Create a draggable object using the image "images/tiger.jpg".</li>
+	<li>Constrain it so that it can only be moved inside its container (#draggableContainer).</li>
+</ol>
+
+<div id="putMarkupHere">
+	<!-- Put image draggables in this div -->
+	<div id="horizontal">
+		<img src="images/earth.jpg"/>
+	</div>
+
+	<div id="vertical">
+		<img src="images/tulips.jpg"/>
+	</div>
+</div>
+
+<div id="draggableContainer">
+	<img src="images/tiger.jpg" />
+</div>
+
+<script type="text/javascript">
+
+	/*
+		Put initialization code here
+	*/
+
+	$( "#horizontal img" ).draggable({
+		axis: "x",
+		cursor: "crosshair"
+	});
+
+	$( "#vertical img" ).draggable({
+		axis: "y",
+		cursor: "pointer"
+	});
+
+	$( "#draggableContainer img" ).draggable({
+		containment: $( "#draggableContainer" )
+	});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+	<title>jQuery UI: Progress Bar</title>
+    <link rel="stylesheet" href="css/ui-lightness/jquery-ui.css">
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/jquery-ui-1.10.4.js"></script>
+</head>
+<body>
+
+<h1>jQuery UI: Progress Bar</h1>
+<h3>Instructions:</h3>
+<ol>
+	<li>Create a progress bar with a maximum value of 50.</li>
+	<li>Use the "Increase" button to increment the value by 10 every time it is clicked.</li>
+	<li>Alert a message when the progress bar has completed.</li>
+</ol>
+
+<div id="progress"></div>
+
+<button id="increase">Increase</button>
+
+<script type="text/javascript">
+$( "#progress" ).progressbar({
+	max: 50,
+	complete: function() {
+		alert( "Completed!" );
+	}
+});
+
+$( "#increase" ).click( function() {
+	var value = $( "#progress" ).progressbar( "value" );
+
+	$( "#progress" ).progressbar( "value", ( value + 10 ) );
+});
+
+</script>
+</body>
+</html>

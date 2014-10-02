@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+	<title>jQuery UI: Custom Widget</title>
+    <link rel="stylesheet" href="css/ui-lightness/jquery-ui.css">
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/jquery-ui-1.10.4.js"></script>
+</head>
+<body>
+
+	<h1>jQuery UI: Custom Widget</h1>
+
+	<h3>Instructions:</h3>
+	<h4>Part 1:</h4>
+	<ol>
+		<li>Create a custom widget called "counter".</li>
+		<li>
+			It should have 2 options: "value" and "increment_amount".
+			<ul>
+				<li>"value" should be a number that will be incremented and decremented.</li>
+				<li>"increment_amount" is the amount that a number will be incremented</li>
+			</ul>
+		</li>
+		<li>When it is created, it should fill its element's text with "value".</li>
+		<li>
+			It should have 2 methods: "increment" and "decrement".
+			<ul>
+				<li>"increment" should increase the "value" by the "increment_amount"</li>
+				<li>"decrement" should decrease the "value" by the "increment_amount"</li>
+				<li>Both methods should update the element's text with the new value.</li>
+			</ul>
+		</li>
+		<li>Make the "-" button call the "decrement" method on the widget.</li>
+		<li>Make the "+" button call the "increment" method on the widget.</li>
+	</ol>
+
+	<button id="decrement">-</button>
+	<button id="increment">+</button>
+	<div id="myWidget"></div>
+
+
+	<script type="text/javascript">
+
+		/*
+			Put initialization code here
+		*/
+
+		$.widget( "ui.counter", {
+
+			options: {
+				value: 0,
+				increment_amount: 1
+			},
+
+			_create: function() {
+				this.element.text( this.options.value );
+			},
+
+			increment: function() {
+				this.options.value = this.options.value + this.options.increment_amount;
+				this.element.text( this.options.value );
+			},
+
+			decrement: function() {
+				this.options.value = this.options.value - this.options.increment_amount;
+				this.element.text( this.options.value );
+			}
+
+		});
+
+		$( "#myWidget" ).counter();
+
+		$( "#increment" ).click( function() {
+			$( "#myWidget" ).counter( "increment" );
+		});
+
+		$( "#decrement" ).click( function() {
+			$( "#myWidget" ).counter( "decrement" );
+		});
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+	<title>jQuery UI: Button</title>
+    <link rel="stylesheet" href="css/ui-lightness/jquery-ui.css">
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/jquery-ui-1.10.4.js"></script>
+</head>
+<body>
+
+<h1>jQuery UI: Button</h1>
+
+<h3>Instructions</h3>
+<ol>
+	<li>Create a button from an &lt;a&gt;</li>
+	<li>Create a buttonset from a group of checkboxes.</li>
+	<li>Create a buttonset from a group of radio boxes.</li>
+</ol>
+
+<a class="buttonLink" href="#">Click Me</a>
+
+<hr />
+
+<div class="buttonBoxes">
+	<label for="button1">Button 1</label><input id="button1" type="checkbox" value="1" />
+
+	<label for="button2">Button 2</label><input id="button2" type="checkbox" value="1" />
+
+	<label for="button3">Button 3</label><input id="button3" type="checkbox" value="1" />
+</div>
+
+<hr />
+
+<div class="buttonRadios">
+	<label for="radio1">Radio 1</label><input id="radio1" type="radio" value="1" name="radio_buttons" />
+
+	<label for="radio2">Radio 2</label><input id="radio2" type="radio" value="2"  name="radio_buttons" />
+
+	<label for="radio3">Radio 3</label><input id="radio3" type="radio" value="3"  name="radio_buttons" />
+</div>
+
+	<script type="text/javascript">
+		$( "a.buttonLink" ).button();
+
+		$( ".buttonBoxes" ).buttonset();
+
+		$( ".buttonRadios" ).buttonset();
+	</script>
+</body>
+</html>

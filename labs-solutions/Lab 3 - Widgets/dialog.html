@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<title>jQuery UI: Dialog</title>
+    <link rel="stylesheet" href="css/ui-lightness/jquery-ui.css">
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/jquery-ui-1.10.4.js"></script>
+</head>
+<body>
+
+<h1>jQuery UI: Dialog</h1>
+<h3>Instructions:</h3>
+<ol>
+	<li>Create a div to use as your dialog.</li>
+	<li>Include a title to be displayed in the title bar of the dialog.</li>
+	<li>Include text to be shown as the body of the dialog.</li>
+	<li>Attach an event so that an alert is displayed when the dialog is closed.</li>
+	<li>Use the #openDialog button to open the dialog.</li>
+</ol>
+
+<button id="openDialog">Open</button>
+
+<div id="dialog" title="This is my Dialog">
+	<p>Here is some text for the dialog.</p>
+</div>
+
+<script type="text/javascript">
+	$( "#dialog" ).hide();
+
+	$( "#openDialog" ).click( function() {
+		$( "#dialog" ).dialog({
+			modal: true,
+			close: function() {
+				alert( "Closed" );
+			}
+		});
+	});
+
+</script>
+</body>
+</html>

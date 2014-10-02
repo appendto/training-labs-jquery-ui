@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+	<title>jQuery UI: Menu</title>
+    <link rel="stylesheet" href="css/ui-lightness/jquery-ui.css">
+    <style>
+    	#menu {
+    		width: 300px;
+    		float:right;
+    	}
+    </style>
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/jquery-ui-1.10.4.js"></script>
+</head>
+<body>
+
+<h1>jQuery UI: Menu</h1>
+<h3>Instructions:</h3>
+<ol>
+	<li>Create the necessary markup and Javascript for a 2 level menu.</li>
+	<li>Bonus: Float the menu to the right and make the items fly out to the left. (Hint: use the "position" option) </li>
+</ol>
+
+<ul id="menu">
+	<li><a href="#">Item 1</a></li>
+	<li>
+		<a href="#">Item 2</a>
+		<ul>
+			<li><a href="#">Sub Item 1</a></li>
+			<li><a href="#">Sub Item 2</a></li>
+			<li><a href="#">Sub Item 3</a></li>
+		</ul>
+	</li>
+	<li>
+		<a href="#">Item 3</a>
+		<ul>
+			<li><a href="#">Sub Item 4</a></li>
+			<li><a href="#">Sub Item 5</a></li>
+			<li><a href="#">Sub Item 6</a></li>
+		</ul>
+	</li>
+	<li><a href="#">Item 4</a></li>
+</ul>
+
+<script type="text/javascript">
+	$( "#menu" ).menu({
+		position: {
+			my: "right top",
+			at: "left top"
+		}
+	});
+</script>
+</body>
+</html>
